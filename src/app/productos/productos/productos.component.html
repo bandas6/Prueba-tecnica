@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-4 mt-1">
+            <!--Slides de imagenes-->
+            <div id="carouselExampleControls" class="carousel slide col-12 " data-bs-ride="carousel">
+                <div class="carousel-inner mt-2">
+                    <div class="carousel-item active">
+                        <img src="https://encolombia.com/wp-content/uploads/2018/10/Tipos-De-Quesos-696x403.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media.wired.com/photos/61b113a6dcc1f0eda4eebd7c/master/pass/Gear-Black_Diamond_Screentap_Gloves-SOURCE-Black-Diamond.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCH2AmZULtwdPIz4gWbDmM_7bsCh_Ch6v0Qg&usqp=CAU"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Slider 2-->
+            <div id="carouselExampleControls" class="carousel slide col-12" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/06/Grilled-Sausages-1024x536.jpg?_t=1597420344"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.rei.com/media/product/125311" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ride-girls-bikes-1638798553.jpg?crop=1xw:1xh;center,top&resize=1200:*"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Slider 3-->
+            <div id="carouselExampleControls" class="carousel slide col-12" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.garboglass.com/data/watermark/20201119/5fb65dd2da4fb.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media.wired.com/photos/61b113a6dcc1f0eda4eebd7c/master/pass/Gear-Black_Diamond_Screentap_Gloves-SOURCE-Black-Diamond.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCH2AmZULtwdPIz4gWbDmM_7bsCh_Ch6v0Qg&usqp=CAU"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+
+             <!--Slider 4-->
+             <div id="carouselExampleControls" class="carousel slide col-12" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.garboglass.com/data/watermark/20201119/5fb65dd2da4fb.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media.wired.com/photos/61b113a6dcc1f0eda4eebd7c/master/pass/Gear-Black_Diamond_Screentap_Gloves-SOURCE-Black-Diamond.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCH2AmZULtwdPIz4gWbDmM_7bsCh_Ch6v0Qg&usqp=CAU"
+                            class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-8">
+            <h1>Productos</h1>
+            <hr>
+            <div class="row">
+                <div *ngFor="let item of datos; let i = index " class="card mt-3 col-6" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{item.name}}</h5>
+                                <p class="card-text">id: {{item.id}}</p>
+                                <p class="card-text">precio: {{item.price}}</p>
+                                <button (click)="verProducto()"
+                                       class="btn btn-success" 
+                                       [routerLink]="['/productos/productos',item.id]">
+                                       agragar compra</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
